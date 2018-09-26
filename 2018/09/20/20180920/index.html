@@ -1,0 +1,222 @@
+<!DOCTYPE html><html lang="null"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>关于使用过的git命令 | hdyecjtu</title><link rel="stylesheet" type="text/css" href="//fonts.neworld.org/css?family=Source+Code+Pro"><link rel="stylesheet" type="text/css" href="/blog/css/style.css?v=2.0.1"><link rel="stylesheet" type="text/css" href="/blog/css/highlight.css?v=2.0.1"><link rel="Shortcut Icon" href="/blog/favicon.ico"><link rel="bookmark" href="/blog/favicon.ico"><link rel="apple-touch-icon" href="/blog/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/blog/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">关于使用过的git命令</h1><a id="logo" href="/blog/.">hdyecjtu</a><p class="description"></p></div><div id="nav-menu"><a href="/blog/." class="current"><i class="fa fa-home"> Start</i></a><a href="/blog/archives/"><i class="fa fa-archive"> Archiv</i></a><a href="/blog/about/"><i class="fa fa-user"> Über</i></a><a href="/blog/atom.xml"><i class="fa fa-rss"> RSS</i></a></div><div id="search-form"><div id="result-mask" class="hide"></div><label><input id="search-key" type="text" autocomplete="off" placeholder="Arama"></label><div id="result-wrap" class="hide"><div id="search-result"></div></div><div class="hide"><template id="search-tpl"><div class="item"><a href="/{path}" title="{title}"><div class="title">{title}</div><div class="time">{date}</div><div class="tags">{tags}</div></a></div></template></div></div></div><div id="layout" class="layout-g"><div class="layout-l"><div class="content_container"><div class="post"><h1 class="post-title">关于使用过的git命令</h1><div class="post-meta"><a href="/blog/2018/09/20/20180920/#comments" class="comment-count"></a><p><span class="date">Sep 20, 2018</span><span><i id="busuanzi_container_page_pv"><i id="busuanzi_value_page_pv"></i><i>Schlägt</i></i></span></p></div><div class="post-content"><h2 id="一、常用命令一览"><a href="#一、常用命令一览" class="headerlink" title="一、常用命令一览"></a>一、常用命令一览</h2><ul>
+<li>git init                                                  # 初始化本地git仓库（创建新仓库） </li>
+<li>git config –global user.name “xxx”                       # 配置用户名 </li>
+<li>git config –global user.email “<a href="mailto:xxx@xxx.com" target="_blank" rel="noopener">xxx@xxx.com</a>“              # 配置邮件 </li>
+<li>git config –global color.ui true                         # git status等命令自动着色 </li>
+<li>git config –global color.status auto </li>
+<li>git config –global color.diff auto </li>
+<li>git config –global color.branch auto </li>
+<li>git config –global color.interactive auto </li>
+<li>git clone git+ssh:<a href="mailto://git@192.168.53.168" target="_blank" rel="noopener">//git@192.168.53.168</a>/VT.git             # clone远程仓库 </li>
+<li>git status                                                # 查看当前版本状态（是否修改） </li>
+<li>git add xyz                                               # 添加xyz文件至index </li>
+<li>git add .                                                 # 增加当前子目录下所有更改过的文件至index </li>
+<li>git commit -m ‘xxx’                                       # 提交 </li>
+<li>git commit –amend -m ‘xxx’                               # 合并上一次提交（用于反复修改） </li>
+<li>git commit -am ‘xxx’                                      # 将add和commit合为一步 </li>
+<li>git rm xxx                                                # 删除index中的文件 </li>
+<li>git rm -r *                                               # 递归删除 </li>
+<li>git log                                                   # 显示提交日志 </li>
+<li>git log -1                                                # 显示1行日志 -n为n行 </li>
+<li>git log -5</li>
+<li>git log –stat                                            # 显示提交日志及相关变动文件 </li>
+<li>git log -p -m </li>
+<li>git show dfb02e6e4f2f7b573337763e5c0013802e392818         # 显示某个提交的详细内容 </li>
+<li>git show dfb02                                            # 可只用commitid的前几位 </li>
+<li>git show HEAD                                             # 显示HEAD提交日志 </li>
+<li>git show HEAD^                                            # 显示HEAD的父（上一个版本）的提交日志 ^^为上两个版本 ^5为上5个版本 </li>
+<li>git tag                                                   # 显示已存在的tag </li>
+<li>git tag -a v2.0 -m ‘xxx’                                  # 增加v2.0的tag </li>
+<li>git show v2.0                                             # 显示v2.0的日志及详细内容 </li>
+<li>git log v2.0                                              # 显示v2.0的日志 </li>
+<li>git diff                                                  # 显示所有未添加至index的变更 </li>
+<li>git diff –cached                                         # 显示所有已添加index但还未commit的变更 </li>
+<li>git diff HEAD^                                            # 比较与上一个版本的差异 </li>
+<li>git diff HEAD – ./lib                                    # 比较与HEAD版本lib目录的差异 </li>
+<li>git diff origin/master..master                            # 比较远程分支master上有本地分支master上没有的 </li>
+<li>git diff origin/master..master –stat                     # 只显示差异的文件，不显示具体内容 </li>
+<li>git remote add origin git+ssh:<a href="mailto://git@192.168.53.168" target="_blank" rel="noopener">//git@192.168.53.168</a>/VT.git # 增加远程定义（用于push/pull/fetch） </li>
+<li>git branch                                                # 显示本地分支 </li>
+<li>git branch –contains 50089                               # 显示包含提交50089的分支 </li>
+<li>git branch -a                                             # 显示所有分支 </li>
+<li>git branch -r                                             # 显示所有原创分支 </li>
+<li>git branch –merged                                       # 显示所有已合并到当前分支的分支 </li>
+<li>git branch –no-merged                                    # 显示所有未合并到当前分支的分支 </li>
+<li>git branch -m master master_copy                          # 本地分支改名 </li>
+<li>git checkout -b master_copy                               # 从当前分支创建新分支master_copy并检出 </li>
+<li>git checkout -b master master_copy                        # 上面的完整版 </li>
+<li>git checkout features/performance                         # 检出已存在的features/performance分支 </li>
+<li>git checkout –track hotfixes/BJVEP933                    # 检出远程分支hotfixes/BJVEP933并创建本地跟踪分支</li>
+<li>git checkout v2.0                                         # 检出版本v2.0</li>
+<li>git checkout -b devel origin/develop                      # 从远程分支develop创建新本地分支devel并检出 </li>
+<li>git checkout – README                                    # 检出head版本的README文件（可用于修改错误回退） </li>
+<li>git merge origin/master                                   # 合并远程master分支至当前分支 </li>
+<li>git cherry-pick ff44785404a8e                             # 合并提交ff44785404a8e的修改 </li>
+<li>git push origin master                                    # 将当前分支push到远程master分支 </li>
+<li>git push origin :hotfixes/BJVEP933                        # 删除远程仓库的hotfixes/BJVEP933分支 </li>
+<li>git push –tags                                           # 把所有tag推送到远程仓库 </li>
+<li>git fetch                                                 # 获取所有远程分支（不更新本地分支，另需merge） </li>
+<li>git fetch –prune                                         # 获取所有原创分支并清除服务器上已删掉的分支 </li>
+<li>git pull origin master                                    # 获取远程分支master并merge到当前分支 </li>
+<li>git mv README README2                                     # 重命名文件README为README2 </li>
+<li>git reset –hard HEAD                                     # 将当前版本重置为HEAD（通常用于merge失败回退） </li>
+<li>git rebase </li>
+<li>git branch -d hotfixes/BJVEP933                           # 删除分支hotfixes/BJVEP933（本分支修改已合并到其他分支） </li>
+<li>git branch -D hotfixes/BJVEP933                           # 强制删除分支hotfixes/BJVEP933 </li>
+<li>git ls-files                                              # 列出git index包含的文件 </li>
+<li>git show-branch                                           # 图示当前分支历史 </li>
+<li>git show-branch –all                                     # 图示所有分支历史 </li>
+<li>git whatchanged                                           # 显示提交历史对应的文件修改 </li>
+<li>git revert dfb02e6e4f2f7b573337763e5c0013802e392818       # 撤销提交dfb02e6e4f2f7b573337763e5c0013802e392818 </li>
+<li>git ls-tree HEAD                                          # 内部命令：显示某个git对象 </li>
+<li>git rev-parse v2.0                                        # 内部命令：显示某个ref对于的SHA1 HASH </li>
+<li>git reflog                                                # 显示所有提交，包括孤立节点 </li>
+<li>git show HEAD@{5} </li>
+<li>git show master@{yesterday}                               # 显示master分支昨天的状态 </li>
+<li>git log –pretty=format:’%h %s’ –graph                   # 图示提交日志 </li>
+<li>git show HEAD~3</li>
+<li>git show -s –pretty=raw 2be7fcb476 </li>
+<li>git stash                                                 # 暂存当前修改，将所有至为HEAD状态 </li>
+<li>git stash list                                            # 查看所有暂存 </li>
+<li>git stash show -p stash@{0}                               # 参考第一次暂存 </li>
+<li>git stash apply stash@{0}                                 # 应用第一次暂存 </li>
+<li>git grep “delete from”                                    # 文件中搜索文本“delete from” </li>
+<li>git grep -e ‘#define’ –and -e SORT_DIRENT </li>
+<li>git gc </li>
+<li>git fsck</li>
+</ul>
+<blockquote>
+<p>远程仓库相关命令</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>命令</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>检出仓库：</td>
+<td>$ git clone git://github.com/jquery/jquery.git</td>
+</tr>
+<tr>
+<td>查看远程仓库：</td>
+<td>$ git remote -v</td>
+</tr>
+<tr>
+<td>添加远程仓库：</td>
+<td>$ git remote add [name] [url]</td>
+</tr>
+<tr>
+<td>删除远程仓库：</td>
+<td>$ git remote rm [name]</td>
+</tr>
+<tr>
+<td>修改远程仓库：</td>
+<td>$ git remote set-url –push [name] [newUrl]</td>
+</tr>
+<tr>
+<td>拉取远程仓库：</td>
+<td>$ git pull [remoteName] [localBranchName]</td>
+</tr>
+<tr>
+<td>推送远程仓库：</td>
+<td>$ git push [remoteName] [localBranchName]</td>
+</tr>
+</tbody>
+</table>
+<p>*如果想把本地的某个分支test提交到远程仓库，并作为远程仓库的master分支，或者作为另外一个名叫test的分支，如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$git push origin test:master         // 提交本地test分支作为远程的master分支</span><br><span class="line">$git push origin test:test              // 提交本地test分支作为远程的test分支</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>分支(branch)操作相关命令</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>命令</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>查看本地分支：</td>
+<td>$ git branch</td>
+</tr>
+<tr>
+<td>查看远程分支：</td>
+<td>$ git branch -r</td>
+</tr>
+<tr>
+<td>创建本地分支：</td>
+<td>$ git branch [name] —-注意新分支创建后不会自动切换为当前分支</td>
+</tr>
+<tr>
+<td>切换分支：</td>
+<td>$ git checkout [name]</td>
+</tr>
+</tbody>
+</table>
+<p>创建新分支并立即切换到新分支：$ git checkout -b [name]<br>删除分支：| $ git branch -d [name] —- -d选项只能删除已经参与了合并的分支，对于未有合并的分支是无法删除的。如果想强制删除一个分支，可以使用-选项<br>合并分支：| $ git merge [name] —-将名称为[name]的分支与当前分支合并<br>创建远程分支(本地分支push到远程)：| $ git push origin [name]<br>删除远程分支：| $ git push origin :heads/[name] 或 $ gitpush origin :[name] </p>
+<p>*创建空的分支：(执行命令之前记得先提交你当前分支的修改，否则会被强制删干净没得后悔)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$git symbolic-ref HEAD refs/heads/[name]</span><br><span class="line">$rm .git/index</span><br><span class="line">$git clean -fdx</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>版本(tag)操作相关命令</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>命令</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>查看版本：</td>
+<td>$ git tag</td>
+</tr>
+<tr>
+<td>创建版本：</td>
+<td>$ git tag [name]</td>
+</tr>
+<tr>
+<td>删除版本：</td>
+<td>$ git tag -d [name]</td>
+</tr>
+<tr>
+<td>查看远程版本：</td>
+<td>$ git tag -r</td>
+</tr>
+<tr>
+<td>创建远程版本(本地版本push到远程)：</td>
+<td>$ git push origin [name]</td>
+</tr>
+<tr>
+<td>删除远程版本：</td>
+<td>$ git push origin :refs/tags/[name]</td>
+</tr>
+<tr>
+<td>合并远程仓库的tag到本地：</td>
+<td>$ git pull origin –tags</td>
+</tr>
+<tr>
+<td>上传本地tag到远程仓库：</td>
+<td>$ git push origin –tags</td>
+</tr>
+<tr>
+<td>创建带注释的tag：</td>
+<td>$ git tag -a [name] -m ‘yourMessage’</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>忽略一些文件、文件夹不提交<br>    在仓库根目录下创建名称为“.gitignore”的文件，写入不需要的文件夹名或文件，每个元素占一行即可，如<br>    target<br>    bin<br>    *.db</p>
+</blockquote>
+<h2 id="二、出现更新冲突"><a href="#二、出现更新冲突" class="headerlink" title="二、出现更新冲突"></a>二、出现更新冲突</h2><blockquote>
+<p>Please, commit your changes or stash them before you can merge.</p>
+</blockquote>
+<p>如果希望保留生产服务器上所做的改动,仅仅并入新配置项, 处理方法如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git stash</span><br><span class="line">git pull</span><br><span class="line">git stash pop</span><br></pre></td></tr></table></figure></p>
+<p>然后可以使用git diff -w +文件名 来确认代码自动合并的情况.</p>
+<p>反过来,如果希望用代码库中的文件完全覆盖本地工作版本. 方法如下:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git reset --hard</span><br><span class="line">git pull</span><br><span class="line">其中git reset是针对版本,如果想针对文件回退本地修改,使用</span><br><span class="line"></span><br><span class="line">git checkout HEAD file/to/restore</span><br><span class="line">`</span><br></pre></td></tr></table></figure>
+</div><div class="tags"><a href="/blog/tags/git/">git</a></div><div class="post-share"><div class="bdsharebuttonbox"><span style="float:left;line-height: 28px;height: 28px;font-size:16px;font-weight:blod">分享到：</span><a href="#" data-cmd="more" class="bds_more"></a><a href="#" data-cmd="mshare" title="分享到一键分享" class="bds_mshare"></a><a href="#" data-cmd="fbook" title="分享到Facebook" class="bds_fbook"></a><a href="#" data-cmd="twi" title="分享到Twitter" class="bds_twi"></a><a href="#" data-cmd="linkedin" title="分享到linkedin" class="bds_linkedin"></a><a href="#" data-cmd="youdao" title="分享到有道云笔记" class="bds_youdao"></a><a href="#" data-cmd="evernotecn" title="分享到印象笔记" class="bds_evernotecn"></a><a href="#" data-cmd="weixin" title="分享到微信" class="bds_weixin"></a><a href="#" data-cmd="qzone" title="分享到QQ空间" class="bds_qzone"></a><a href="#" data-cmd="tsina" title="分享到新浪微博" class="bds_tsina"></a></div></div><div class="post-nav"><a href="/blog/2018/09/20/20180920-1/" class="pre">零碎错误处理</a><a href="/blog/2018/09/16/2018091501/" class="next">关于错误码的汇总</a></div><div id="comments"></div></div></div></div><div class="layout-r"><div id="sidebar"><div class="search-pla"></div><div id="toc" class="widget"><div class="widget-title"><i class="fa fa-fei">Inhalte</i></div><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、常用命令一览"><span class="toc-text">一、常用命令一览</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、出现更新冲突"><span class="toc-text">二、出现更新冲突</span></a></li></ol></div><div class="widget"><div class="widget-title"><i class="fa fa-xie"> Letzte</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/blog/2018/09/25/20180925/">SVG 边框 (stroke) 基本知识以及 SVG 边框动画</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2018/09/20/20180920-1/">零碎错误处理</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2018/09/20/20180920/">关于使用过的git命令</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2018/09/16/2018091501/">关于错误码的汇总</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2018/09/15/20180915/">input框移动端中键盘收起改变页面布局出现空白的情况</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2018/09/07/20180907-1/">vue路由守卫+嵌套路由</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2018/09/07/hello-world/">Hello World</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2018/09/06/20180908/">JavaScript的函数支持重载吗？</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2018/09/06/20180907/">关于flex兼容问题</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-gui"> Kategorien</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/JS/">JS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/vue/">vue</a><span class="category-list-count">2</span></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-biao"> Tags</i></div><div class="tagcloud"><a href="/blog/tags/vue/" style="font-size: 15px;">vue</a> <a href="/blog/tags/JS/" style="font-size: 15px;">JS</a> <a href="/blog/tags/css-svg/" style="font-size: 15px;">css svg</a> <a href="/blog/tags/VUE/" style="font-size: 15px;">VUE</a> <a href="/blog/tags/小程序-vue/" style="font-size: 15px;">小程序 vue</a> <a href="/blog/tags/git/" style="font-size: 15px;">git</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-archive"> Archiv</i></div><ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/09/">September 2018</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-you"> Blogroll</i></div><ul></ul><a href="http://www.example1.com/" title="site-name1" target="_blank">site-name1</a><ul></ul><a href="http://www.example2.com/" title="site-name2" target="_blank">site-name2</a><ul></ul><a href="http://www.example3.com/" title="site-name3" target="_blank">site-name3</a></div></div></div></div><a id="totop" href="#top"></a><div id="footer"><div class="footer-info"><p><a href="/blog/baidusitemap.xml">Baidu Site Haritası</a> |  <a href="/blog/atom.xml">RSS</a> |  <a href="/blog/about/">Über</a></p><p>本站总访问量：<i id="busuanzi_container_site_pv"><i id="busuanzi_value_site_pv"></i></i>次</p><p><span> Copyright &copy;<a href="/blog/." rel="nofollow">danyang he.</a></span><span> Theme by<a rel="nofollow" target="_blank" href="https://github.com/chaooo/hexo-theme-BlueLake"> BlueLake.</a></span><span> Count by<a href="http://busuanzi.ibruce.info/"> busuanzi.</a></span><span> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a></span></p></div></div></div><script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script><script type="text/javascript" src="/blog/js/search.json.js?v=2.0.1"></script><script type="text/javascript" src="/blog/js/toctotop.js?v=2.0.1" async></script><script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["mshare","weixin","tsina","qzone","linkedin","fbook","twi","print","renren","sqq","evernotecn","bdysc","tqq","tqf","bdxc","kaixin001","tieba","douban","bdhome","thx","ibaidu","meilishuo","mogujie","diandian","huaban","duitang","hx","fx","youdao","sdo","qingbiji","people","xinhua","mail","isohu","yaolan","wealink","ty","iguba","h163","copy"],"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{},"image":{"viewList":["tsina","qzone","weixin","fbook","twi","linkedin","youdao","evernotecn","mshare"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["tsina","qzone","weixin","fbook","twi","linkedin","youdao","evernotecn","mshare"]}};with(document)0[(getElementsByTagName('head')[0]||head).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+</script></body></html>
