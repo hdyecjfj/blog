@@ -3,20 +3,16 @@
 <head>
   <meta charset="utf-8">
   
-  <title>JavaScript的函数支持重载吗？ | hdyecjtu</title>
+  <title>home | hdyecjtu</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="JavaScript的函数支持重载吗？ JavaScript的函数支持重载吗？对于这个问题，主要有两个点，第一，JavaScript的函数；第二，重载。       首先，说一下重载。所谓重载，简单说，就是函数或者方法有相同的名称，但是参数列表不相同的情形，这样的同名不同参数的函数或者方法之间，互相称之为重载函数或者方法。所以说，重载主要需要两点：第一，同样的函数名。第二，不同的函数参数。">
-<meta name="keywords" content="JS">
-<meta property="og:type" content="article">
-<meta property="og:title" content="JavaScript的函数支持重载吗？">
-<meta property="og:url" content="https://blog.myhdy.cn/2018/09/06/20180908/index.html">
+  <meta property="og:type" content="article">
+<meta property="og:title" content="home">
+<meta property="og:url" content="https://blog.myhdy.cn/2018/09/26/home/index.html">
 <meta property="og:site_name" content="hdyecjtu">
-<meta property="og:description" content="JavaScript的函数支持重载吗？ JavaScript的函数支持重载吗？对于这个问题，主要有两个点，第一，JavaScript的函数；第二，重载。       首先，说一下重载。所谓重载，简单说，就是函数或者方法有相同的名称，但是参数列表不相同的情形，这样的同名不同参数的函数或者方法之间，互相称之为重载函数或者方法。所以说，重载主要需要两点：第一，同样的函数名。第二，不同的函数参数。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-09-26T05:36:36.488Z">
+<meta property="og:updated_time" content="2018-09-26T05:38:55.084Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JavaScript的函数支持重载吗？">
-<meta name="twitter:description" content="JavaScript的函数支持重载吗？ JavaScript的函数支持重载吗？对于这个问题，主要有两个点，第一，JavaScript的函数；第二，重载。       首先，说一下重载。所谓重载，简单说，就是函数或者方法有相同的名称，但是参数列表不相同的情形，这样的同名不同参数的函数或者方法之间，互相称之为重载函数或者方法。所以说，重载主要需要两点：第一，同样的函数名。第二，不同的函数参数。">
+<meta name="twitter:title" content="home">
   
     <link rel="alternative" href="/atom.xml" title="hdyecjtu" type="application/atom+xml">
   
@@ -236,11 +232,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-20180908" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-home" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2018/09/06/20180908/" class="article-date">
-      <time datetime="2018-09-06T09:00:20.000Z" itemprop="datePublished">2018-09-06</time>
+      <a href="/2018/09/26/home/" class="article-date">
+      <time datetime="2018-09-26T05:38:55.000Z" itemprop="datePublished">2018-09-26</time>
 </a>
     </div>
   
@@ -253,7 +249,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      JavaScript的函数支持重载吗？
+      home
     </h1>
   
 
@@ -261,16 +257,8 @@
       
       <div class="article-info article-info-post">
         
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/JS/">JS</a>
-    </div>
-
 
         
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li></ul>
-    </div>
-
         <div class="clearfix"></div>
       </div>
       
@@ -278,15 +266,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="JavaScript的函数支持重载吗？"><a href="#JavaScript的函数支持重载吗？" class="headerlink" title="JavaScript的函数支持重载吗？"></a>JavaScript的函数支持重载吗？</h2><p> JavaScript的函数支持重载吗？对于这个问题，主要有两个点，第一，JavaScript的函数；第二，重载。<br>       首先，说一下重载。所谓重载，简单说，就是函数或者方法有相同的名称，但是参数列表不相同的情形，这样的同名不同参数的函数或者方法之间，互相称之为重载函数或者方法。所以说，重载主要需要两点：第一，同样的函数名。第二，不同的函数参数。<br>       明确了重载的定义之后，我们再回到JavaScript这里。追本溯源，现在一说到JavaScript，我们就可以联想到ECMAScript，即JavaScript的标准。那么，这个标准里面对函数做出了那些规范呢？<br>       首先，ECMAScript是没有函数签名的概念的，因为其参数是由包含零或多个值的数组来表示的。而没有函数签名，真正的重载是不可能做到的。<br>        JavaScript里面的一个arguments对象。首先，ECMAScript函数的参数与其他语言的函数参数有一点不同。ECMAScript函数不介意传进来的参数个数和类型。也就是说，在你定义了函数只接受两个参数之后，你仍然可以在调用的时候传递零或多个参数。这并不会报错。原因就在于arguments对象。ECMAScript中，函数的参数始终是存放在一个数组中，而通过arguments对象，就可以访问到这个数组。所以，只需要使用length属性就可以确定调用函数时传递了多少个参数。<br>       说到这里，我们可以来尝试这样写：<br><a id="more"></a></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">showTip(...args) &#123;</span><br><span class="line">    <span class="keyword">if</span>(args.length == <span class="number">1</span>)&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'你只传入了一个参数！'</span>);</span><br><span class="line">        <span class="built_in">console</span>.log(args);</span><br><span class="line">        setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">            <span class="keyword">this</span>.hideTip();</span><br><span class="line">        &#125;,<span class="number">3000</span>);</span><br><span class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span>(args.length&gt;<span class="number">1</span>)&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"你传入了大于1个的参数"</span>);</span><br><span class="line">        <span class="built_in">console</span>.log(args);</span><br><span class="line">        setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">            <span class="keyword">this</span>.hideTip();</span><br><span class="line">        &#125;,args[<span class="number">2</span>]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>@@@@由于文档要求尽量不要使用argument</p>
-<ul>
-<li>不要使用 arguments。可以选择 rest 语法 … 替代。</li>
-<li>为什么？使用 … 能明确你要传入的参数。另外 rest 参数是一个真正的数组，而 arguments 是一个类数组。</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// bad</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">concatenateAll</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> args = <span class="built_in">Array</span>.prototype.slice.call(<span class="built_in">arguments</span>);</span><br><span class="line">  <span class="keyword">return</span> args.join(<span class="string">''</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// good</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">concatenateAll</span>(<span class="params">...args</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> args.join(<span class="string">''</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+        
       
       
         <div class="page-reward">
@@ -341,13 +321,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2018/09/06/20180908/">JavaScript的函数支持重载吗？</a></p>
+        <p><span>本文标题:</span><a href="/2018/09/26/home/">home</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 danyang he 的个人博客">danyang he</a></p>
-        <p><span>发布时间:</span>2018年09月06日 - 17时00分</p>
-        <p><span>最后更新:</span>2018年09月26日 - 13时36分</p>
+        <p><span>发布时间:</span>2018年09月26日 - 13时38分</p>
+        <p><span>最后更新:</span>2018年09月26日 - 13时38分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2018/09/06/20180908/" title="JavaScript的函数支持重载吗？">https://blog.myhdy.cn/2018/09/06/20180908/</a>
-            <span class="copy-path" data-clipboard-text="原文: https://blog.myhdy.cn/2018/09/06/20180908/　　作者: danyang he" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2018/09/26/home/" title="home">https://blog.myhdy.cn/2018/09/26/home/</a>
+            <span class="copy-path" data-clipboard-text="原文: https://blog.myhdy.cn/2018/09/26/home/　　作者: danyang he" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -360,18 +340,9 @@
 
 <nav id="article-nav">
   
-    <a href="/2018/09/07/20180907-1/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          vue路由守卫+嵌套路由
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/09/06/20180907/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">关于flex兼容问题</div>
+    <a href="/2018/09/25/20180925/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">SVG 边框 (stroke) 基本知识以及 SVG 边框动画</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -382,7 +353,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#JavaScript的函数支持重载吗？"><span class="toc-number">1.</span> <span class="toc-text">JavaScript的函数支持重载吗？</span></a></li></ol>
+    
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
@@ -448,13 +419,11 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2018/09/07/20180907-1/" title="上一篇: vue路由守卫+嵌套路由">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/2018/09/06/20180907/" title="下一篇: 关于flex兼容问题">
+            <a href="/2018/09/25/20180925/" title="下一篇: SVG 边框 (stroke) 基本知识以及 SVG 边框动画">
                 <i class="fa fa-angle-right"></i>
             </a>
         

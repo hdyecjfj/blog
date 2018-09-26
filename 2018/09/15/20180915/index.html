@@ -5,18 +5,18 @@
   
   <title>input框移动端中键盘收起改变页面布局出现空白的情况 | hdyecjtu</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="解决position:fixed受虚拟键盘的影响1. 不适用fixed定位，使用替代方案（推荐的方法）：a方案：使用overflow-y:scroll;+position:absolute; b方案：使用overflow-y:scroll;+flex布局; 其中，a方案内容区域的高度通过js控制;b方案内容区域的高度通过flex布局自动排版； 2. 根据输入框获取焦点与失去焦点事件切换fixed定">
+  <meta name="description" content="解决position:fixed受虚拟键盘的影响1. 不适用fixed定位，使用替代方案（推荐的方法）：a方案：使用overflow-y:scroll;+position:absolute; b方案：使用overflow-y:scroll;+flex布局; 其中，a方案内容区域的高度通过js控制;b方案内容区域的高度通过flex布局自动排版；">
 <meta name="keywords" content="小程序 vue">
 <meta property="og:type" content="article">
 <meta property="og:title" content="input框移动端中键盘收起改变页面布局出现空白的情况">
 <meta property="og:url" content="https://blog.myhdy.cn/2018/09/15/20180915/index.html">
 <meta property="og:site_name" content="hdyecjtu">
-<meta property="og:description" content="解决position:fixed受虚拟键盘的影响1. 不适用fixed定位，使用替代方案（推荐的方法）：a方案：使用overflow-y:scroll;+position:absolute; b方案：使用overflow-y:scroll;+flex布局; 其中，a方案内容区域的高度通过js控制;b方案内容区域的高度通过flex布局自动排版； 2. 根据输入框获取焦点与失去焦点事件切换fixed定">
+<meta property="og:description" content="解决position:fixed受虚拟键盘的影响1. 不适用fixed定位，使用替代方案（推荐的方法）：a方案：使用overflow-y:scroll;+position:absolute; b方案：使用overflow-y:scroll;+flex布局; 其中，a方案内容区域的高度通过js控制;b方案内容区域的高度通过flex布局自动排版；">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-09-26T03:54:20.945Z">
+<meta property="og:updated_time" content="2018-09-26T05:35:42.830Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="input框移动端中键盘收起改变页面布局出现空白的情况">
-<meta name="twitter:description" content="解决position:fixed受虚拟键盘的影响1. 不适用fixed定位，使用替代方案（推荐的方法）：a方案：使用overflow-y:scroll;+position:absolute; b方案：使用overflow-y:scroll;+flex布局; 其中，a方案内容区域的高度通过js控制;b方案内容区域的高度通过flex布局自动排版； 2. 根据输入框获取焦点与失去焦点事件切换fixed定">
+<meta name="twitter:description" content="解决position:fixed受虚拟键盘的影响1. 不适用fixed定位，使用替代方案（推荐的方法）：a方案：使用overflow-y:scroll;+position:absolute; b方案：使用overflow-y:scroll;+flex布局; 其中，a方案内容区域的高度通过js控制;b方案内容区域的高度通过flex布局自动排版；">
   
     <link rel="alternative" href="/atom.xml" title="hdyecjtu" type="application/atom+xml">
   
@@ -277,6 +277,7 @@
         <h2 id="解决position-fixed受虚拟键盘的影响"><a href="#解决position-fixed受虚拟键盘的影响" class="headerlink" title="解决position:fixed受虚拟键盘的影响"></a>解决position:fixed受虚拟键盘的影响</h2><h3 id="1-不适用fixed定位，使用替代方案（推荐的方法）："><a href="#1-不适用fixed定位，使用替代方案（推荐的方法）：" class="headerlink" title="1. 不适用fixed定位，使用替代方案（推荐的方法）："></a>1. 不适用fixed定位，使用替代方案（推荐的方法）：</h3><pre><code>a方案：使用overflow-y:scroll;+position:absolute;
 b方案：使用overflow-y:scroll;+flex布局;
 </code></pre><p>其中，a方案内容区域的高度通过js控制;b方案内容区域的高度通过flex布局自动排版；</p>
+<a id="more"></a>
 <h3 id="2-根据输入框获取焦点与失去焦点事件切换fixed定位与static定位"><a href="#2-根据输入框获取焦点与失去焦点事件切换fixed定位与static定位" class="headerlink" title="2. 根据输入框获取焦点与失去焦点事件切换fixed定位与static定位"></a>2. 根据输入框获取焦点与失去焦点事件切换fixed定位与static定位</h3><h2 id="问题源头可能是-移动端虚拟键盘出现的条件是：文本框（文本类）获得焦点"><a href="#问题源头可能是-移动端虚拟键盘出现的条件是：文本框（文本类）获得焦点" class="headerlink" title="问题源头可能是:移动端虚拟键盘出现的条件是：文本框（文本类）获得焦点"></a>问题源头可能是:移动端虚拟键盘出现的条件是：文本框（文本类）获得焦点</h2><p>弹出键盘后原先定位与底部的东西会被虚拟键盘顶上去，样式错乱！</p>
 <p>首先我们会想到监听focus和blur事件，但是会有bug，虚拟键盘有自带的收起键盘，这样输入框还是聚焦事件，并没有触发blur事件。所以会导致失效的。</p>
 <p>解决办法</p>
@@ -378,7 +379,7 @@ b方案：使用overflow-y:scroll;+flex布局;
         <p><span>本文标题:</span><a href="/2018/09/15/20180915/">input框移动端中键盘收起改变页面布局出现空白的情况</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 danyang he 的个人博客">danyang he</a></p>
         <p><span>发布时间:</span>2018年09月15日 - 20时00分</p>
-        <p><span>最后更新:</span>2018年09月26日 - 11时54分</p>
+        <p><span>最后更新:</span>2018年09月26日 - 13时35分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/09/15/20180915/" title="input框移动端中键盘收起改变页面布局出现空白的情况">https://blog.myhdy.cn/2018/09/15/20180915/</a>
             <span class="copy-path" data-clipboard-text="原文: https://blog.myhdy.cn/2018/09/15/20180915/　　作者: danyang he" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -493,7 +494,7 @@ b方案：使用overflow-y:scroll;+flex布局;
             </a>
         
     </div>
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/09/25/20180925/">SVG 边框 (stroke) 基本知识以及 SVG 边框动画</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/20/20180920-1/">零碎错误处理</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/20/20180920/">关于使用过的git命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/16/2018091501/">关于错误码的汇总</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/16/hello-world/">前端知识体系</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/15/20180915/">input框移动端中键盘收起改变页面布局出现空白的情况</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/07/20180907-1/">vue路由守卫+嵌套路由</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/06/20180908/">JavaScript的函数支持重载吗？</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/06/20180907/">关于flex兼容问题</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/09/26/home/">home</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/25/20180925/">SVG 边框 (stroke) 基本知识以及 SVG 边框动画</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/20/20180920-1/">零碎错误处理</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/20/20180920/">关于使用过的git命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/16/2018091501/">关于错误码的汇总</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/16/hello-world/">前端知识体系</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/15/20180915/">input框移动端中键盘收起改变页面布局出现空白的情况</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/07/20180907-1/">vue路由守卫+嵌套路由</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/06/20180908/">JavaScript的函数支持重载吗？</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/06/20180907/">关于flex兼容问题</a></li></ul>
     <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
     <script>
         $(".post-list").addClass("toc-article");

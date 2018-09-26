@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="hdyecjtu">
 <meta property="og:description" content="一：500错误 1、500 Internal Server Error 内部服务错误：顾名思义500错误一般是服务器遇到意外情况，而无法完成请求。 2、500出错的可能性： 　　a、编程语言语法错误，web脚本错误 　　b、并发高时，因为系统资源限制，而不能打开过多的文件 3、一般解决思路： 　　a、查看nginx、php的错误日志文件，从而看出端倪 　　b、如果是too many open fi">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-09-18T07:38:54.692Z">
+<meta property="og:updated_time" content="2018-09-26T05:36:03.706Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于错误码的汇总">
 <meta name="twitter:description" content="一：500错误 1、500 Internal Server Error 内部服务错误：顾名思义500错误一般是服务器遇到意外情况，而无法完成请求。 2、500出错的可能性： 　　a、编程语言语法错误，web脚本错误 　　b、并发高时，因为系统资源限制，而不能打开过多的文件 3、一般解决思路： 　　a、查看nginx、php的错误日志文件，从而看出端倪 　　b、如果是too many open fi">
@@ -282,7 +282,7 @@
 <p>3、一般解决思路：</p>
 <p>　　a、查看nginx、php的错误日志文件，从而看出端倪</p>
 <p>　　b、如果是too many open files，修改nginx的worker_rlimit_nofile参数，使用ulimit查看系统打开文件限制，修改/etc/security/limits.conf，还是出现too many open files，那就要考虑做负载均衡，把流量分散到不同服务器上去了</p>
-<p>　　c、如果是脚本的问题，则需要修复脚本错误，优化代码</p>
+<p>　　c、如果是脚本的问题，则需要修复脚本错误，优化代码<br><a id="more"></a></p>
 <p>二：502、504错误　</p>
 <p>1、502 Bad Gateway错误、504 Bad Gateway timeout 网关超时</p>
 <p>2、502、504出现的可能性</p>
@@ -355,7 +355,7 @@ c、504 表示超时，也就是客户端所发出的请求没有到达网关，
         <p><span>本文标题:</span><a href="/2018/09/16/2018091501/">关于错误码的汇总</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 danyang he 的个人博客">danyang he</a></p>
         <p><span>发布时间:</span>2018年09月16日 - 19时28分</p>
-        <p><span>最后更新:</span>2018年09月18日 - 15时38分</p>
+        <p><span>最后更新:</span>2018年09月26日 - 13时36分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/09/16/2018091501/" title="关于错误码的汇总">https://blog.myhdy.cn/2018/09/16/2018091501/</a>
             <span class="copy-path" data-clipboard-text="原文: https://blog.myhdy.cn/2018/09/16/2018091501/　　作者: danyang he" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -470,7 +470,7 @@ c、504 表示超时，也就是客户端所发出的请求没有到达网关，
             </a>
         
     </div>
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/09/25/20180925/">SVG 边框 (stroke) 基本知识以及 SVG 边框动画</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/20/20180920-1/">零碎错误处理</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/20/20180920/">关于使用过的git命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/16/2018091501/">关于错误码的汇总</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/16/hello-world/">前端知识体系</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/15/20180915/">input框移动端中键盘收起改变页面布局出现空白的情况</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/07/20180907-1/">vue路由守卫+嵌套路由</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/06/20180908/">JavaScript的函数支持重载吗？</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/06/20180907/">关于flex兼容问题</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/09/26/home/">home</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/25/20180925/">SVG 边框 (stroke) 基本知识以及 SVG 边框动画</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/20/20180920-1/">零碎错误处理</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/20/20180920/">关于使用过的git命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/16/2018091501/">关于错误码的汇总</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/16/hello-world/">前端知识体系</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/15/20180915/">input框移动端中键盘收起改变页面布局出现空白的情况</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/07/20180907-1/">vue路由守卫+嵌套路由</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/06/20180908/">JavaScript的函数支持重载吗？</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/06/20180907/">关于flex兼容问题</a></li></ul>
     <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
     <script>
         $(".post-list").addClass("toc-article");
